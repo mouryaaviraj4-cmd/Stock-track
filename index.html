@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Garment Design Stock &amp; Dispatch Tracker (Step 2)</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-0{bottom:0px}.left-0{left:0px}.left-3{left:0.75rem}.right-0{right:0px}.top-2\.5{top:0.625rem}.z-40{z-index:40}.mx-auto{margin-left:auto;margin-right:auto}.mx-0\.5{margin-left:0.125rem;margin-right:0.125rem}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-6{height:1.5rem}.h-full{height:100%}.max-h-72{max-height:18rem}.min-h-screen{min-height:100vh}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.w-6{width:1.5rem}.w-full{width:100%}.min-w-\[100px\]{min-width:100px}.min-w-\[130px\]{min-width:130px}.min-w-\[135px\]{min-width:135px}.min-w-\[140px\]{min-width:140px}.min-w-\[175px\]{min-width:175px}.min-w-\[88px\]{min-width:88px}.min-w-\[26px\]{min-width:26px}.max-w-6xl{max-width:72rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-\[180px\]{max-width:180px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-cols-7{grid-template-columns:repeat(7, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240 / var(--tw-divide-opacity, 1))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-amber-200{--tw-bg-opacity:1;background-color:rgb(253 230 138 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50\/40{background-color:rgb(238 242 255 / 0.4)}.bg-indigo-50\/70{background-color:rgb(238 242 255 / 0.7)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-rose-200{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-100\/80{background-color:rgb(241 245 249 / 0.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.p-1\.5{padding:0.375rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-0\.5{padding:0.125rem}.p-2{padding:0.5rem}.p-3\.5{padding:0.875rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-24{padding-bottom:6rem}.pb-3{padding-bottom:0.75rem}.pl-9{padding-left:2.25rem}.pr-1{padding-right:0.25rem}.pr-4{padding-right:1rem}.pt-2{padding-top:0.5rem}.pt-1{padding-top:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.align-middle{vertical-align:middle}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wider{letter-spacing:0.05em}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-indigo-100:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-500:hover{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-700:hover{--tw-bg-opacity:1;background-color:rgb(190 18 60 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-50:hover{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50\/90:hover{background-color:rgb(248 250 252 / 0.9)}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-600:hover{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.active\:bg-indigo-800:active{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.active\:bg-rose-800:active{--tw-bg-opacity:1;background-color:rgb(159 18 57 / var(--tw-bg-opacity, 1))}.active\:bg-emerald-100:active{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.active\:bg-rose-100:active{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:col-span-2{grid-column:span 2 / span 2}.sm\:flex{display:flex}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:self-auto{align-self:auto}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:p-8{padding:2rem}.md\:pb-10{padding-bottom:2.5rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}.lg\:justify-between{justify-content:space-between}}</style><link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png" type="image/png"></head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-24 md:pb-10">
+
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto p-3 sm:p-5 md:p-8 space-y-5">
+
+    <!-- 1. Header & Summary Banner -->
+    <header class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 mb-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+          <span>Step 2: Scanner, Auto-Dispatch, Bulk Upload &amp; Android PWA</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-bold text-slate-900">Cloth Design Stock &amp; Dispatch App</h1>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Scan barcodes at dispatch, auto-deduct sizes <strong class="text-slate-700">S to 4XL</strong>, bulk upload codes, and run on any Android device.
+        </p>
+      </div>
+
+      <!-- Summary Counters -->
+      <div class="grid grid-cols-3 sm:flex items-center gap-2.5">
+        <div class="bg-slate-100 rounded-xl px-3.5 py-2.5 text-center min-w-[88px]">
+          <div class="text-[11px] font-medium text-slate-500">Designs</div>
+          <div id="totalDesignsCount" class="text-lg sm:text-xl font-bold text-slate-900">3</div>
+        </div>
+        <div class="bg-indigo-600 text-white rounded-xl px-3.5 py-2.5 text-center min-w-[100px] shadow-sm">
+          <div class="text-[11px] font-medium text-indigo-100">Total Pieces</div>
+          <div id="grandTotalPieces" class="text-lg sm:text-xl font-bold">190</div>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl px-3.5 py-2.5 text-center min-w-[100px]">
+          <div class="text-[11px] font-medium text-emerald-700">Dispatched</div>
+          <div id="totalDispatchedCount" class="text-lg sm:text-xl font-bold text-emerald-800">0</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs (Desktop & Tablet Bar) -->
+    <nav class="bg-white rounded-2xl shadow-sm border border-slate-200 p-1.5 flex overflow-x-auto no-scrollbar gap-1.5" aria-label="Main Tabs">
+      <button type="button" data-tab="inventoryTab" class="tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition">
+        <span>📦 Stock Grid (S–4XL)</span>
+      </button>
+      <button type="button" data-tab="scannerTab" class="tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition">
+        <span>📷 Scan &amp; Dispatch</span>
+      </button>
+      <button type="button" data-tab="uploadTab" class="tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition">
+        <span>📂 Upload &amp; Stock Info</span>
+      </button>
+      <button type="button" data-tab="androidTab" class="tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white shadow-sm transition">
+        <span>📱 Android &amp; GitHub</span>
+      </button>
+    </nav>
+
+    <!-- Global Feedback Banner -->
+    <p id="feedbackBanner" class="hidden text-xs sm:text-sm font-medium px-4 py-3 rounded-xl">Restored 2 pc(s) of DSN-101 (L) back to stock.</p>
+
+    <!-- ==========================================
+         TAB 1: LIVE INVENTORY & ADD DESIGN
+    =========================================== -->
+    <div id="inventoryTab" class="tab-panel space-y-5 hidden">
+
+      <!-- Search, Filter & Quick Actions Bar -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+        <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+          <div class="relative flex-1">
+            <input id="searchDesignInput" type="text" placeholder="Search design code, style name, fabric, or rack (e.g., DSN-101)..." class="w-full rounded-xl border border-slate-300 pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <span class="absolute left-3 top-2.5 text-slate-400 text-sm">🔍</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="stockFilterSelect" aria-label="Filter stock status" class="rounded-xl border border-slate-300 px-3 py-2.5 text-xs sm:text-sm font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <option value="all">All Designs</option>
+              <option value="low">Low / Out of Stock Sizes (≤ 3)</option>
+              <option value="instock">Well Stocked (&gt; 20 total)</option>
+            </select>
+
+            <button id="exportCsvQuickBtn" type="button" class="text-xs font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-3.5 py-2.5 rounded-xl transition">
+              ⬇ Export CSV
+            </button>
+
+            <button id="resetSampleBtn" type="button" class="text-xs font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-3.5 py-2.5 rounded-xl transition">
+              Reset Sample Data
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stock Table (Sizes S to 4XL) -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="p-4 sm:px-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div>
+            <h2 class="text-base font-semibold text-slate-900">Live Size-Wise Inventory (S to 4XL)</h2>
+            <p class="text-xs text-slate-500">
+              Tap <strong class="text-rose-600">−</strong> to deduct 1 piece, <strong class="text-emerald-600">+</strong> to add stock, or tap any <strong class="text-indigo-600">Design Code</strong> for full details.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 text-xs">
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-rose-200 inline-block"></span> Out (0)</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-amber-200 inline-block"></span> Low (1–3)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-100/80 text-slate-600 text-xs font-semibold uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3.5 px-4 min-w-[175px]">Design Code &amp; Info</th>
+                <th class="py-3.5 px-1.5 text-center">S</th>
+                <th class="py-3.5 px-1.5 text-center">M</th>
+                <th class="py-3.5 px-1.5 text-center">L</th>
+                <th class="py-3.5 px-1.5 text-center">XL</th>
+                <th class="py-3.5 px-1.5 text-center">2XL</th>
+                <th class="py-3.5 px-1.5 text-center">3XL</th>
+                <th class="py-3.5 px-1.5 text-center">4XL</th>
+                <th class="py-3.5 px-3 text-right">Total</th>
+                <th class="py-3.5 px-3 text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody" class="divide-y divide-slate-200 text-sm"><tr class="hover:bg-slate-50/90 transition"><td class="py-3 px-4 align-middle">
+          <button type="button" data-action="inspect" data-code="DSN-101" class="text-left group">
+            <div class="font-bold text-indigo-700 group-hover:underline flex items-center gap-1.5">
+              <span>DSN-101</span>
+              <span class="text-[10px] font-medium bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Rack A-1</span>
+            </div>
+            <div class="text-xs text-slate-500 truncate max-w-[180px]">Cotton Kurta - Indigo Print</div>
+          </button>
+        </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="S" title="Deduct 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">12</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="S" title="Add 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="M" title="Deduct 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">18</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="M" title="Add 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="L" title="Deduct 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">22</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="L" title="Add 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="XL" title="Deduct 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">15</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="XL" title="Add 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="2XL" title="Deduct 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">10</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="2XL" title="Add 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="3XL" title="Deduct 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">6</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="3XL" title="Add 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d1" data-size="4XL" title="Deduct 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">4</span>
+              <button type="button" data-action="increment" data-id="d1" data-size="4XL" title="Add 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-3 px-3 text-right font-bold text-slate-900 align-middle">87</td><td class="py-3 px-3 text-center align-middle">
+          <button type="button" data-action="delete" data-id="d1" class="text-xs text-slate-400 hover:text-rose-600 px-2 py-1 rounded hover:bg-rose-50 transition">Remove</button>
+        </td></tr><tr class="hover:bg-slate-50/90 transition"><td class="py-3 px-4 align-middle">
+          <button type="button" data-action="inspect" data-code="DSN-102" class="text-left group">
+            <div class="font-bold text-indigo-700 group-hover:underline flex items-center gap-1.5">
+              <span>DSN-102</span>
+              <span class="text-[10px] font-medium bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Rack B-3</span>
+            </div>
+            <div class="text-xs text-slate-500 truncate max-w-[180px]">Linen Casual Shirt - Olive</div>
+          </button>
+        </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="S" title="Deduct 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">8</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="S" title="Add 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="M" title="Deduct 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">14</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="M" title="Add 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="L" title="Deduct 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">16</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="L" title="Add 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="XL" title="Deduct 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">12</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="XL" title="Add 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="2XL" title="Deduct 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">8</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="2XL" title="Add 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="3XL" title="Deduct 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-amber-100 text-amber-800 font-semibold">3</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="3XL" title="Add 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d2" data-size="4XL" title="Deduct 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-amber-100 text-amber-800 font-semibold">2</span>
+              <button type="button" data-action="increment" data-id="d2" data-size="4XL" title="Add 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-3 px-3 text-right font-bold text-slate-900 align-middle">63</td><td class="py-3 px-3 text-center align-middle">
+          <button type="button" data-action="delete" data-id="d2" class="text-xs text-slate-400 hover:text-rose-600 px-2 py-1 rounded hover:bg-rose-50 transition">Remove</button>
+        </td></tr><tr class="hover:bg-slate-50/90 transition"><td class="py-3 px-4 align-middle">
+          <button type="button" data-action="inspect" data-code="DSN-103" class="text-left group">
+            <div class="font-bold text-indigo-700 group-hover:underline flex items-center gap-1.5">
+              <span>DSN-103</span>
+              <span class="text-[10px] font-medium bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Rack C-2</span>
+            </div>
+            <div class="text-xs text-slate-500 truncate max-w-[180px]">Festive Embroidered Set</div>
+          </button>
+        </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="S" title="Deduct 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">5</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="S" title="Add 1 piece (S)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="M" title="Deduct 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">10</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="M" title="Add 1 piece (M)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="L" title="Deduct 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">10</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="L" title="Add 1 piece (L)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="XL" title="Deduct 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">8</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="XL" title="Add 1 piece (XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="2XL" title="Deduct 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-slate-100 text-slate-800">5</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="2XL" title="Add 1 piece (2XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="3XL" title="Deduct 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-amber-100 text-amber-800 font-semibold">2</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="3XL" title="Add 1 piece (3XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-2.5 px-1 text-center align-middle">
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button type="button" data-action="decrement" data-id="d3" data-size="4XL" title="Deduct 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition">−</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 bg-rose-100 text-rose-700 font-bold">0</span>
+              <button type="button" data-action="increment" data-id="d3" data-size="4XL" title="Add 1 piece (4XL)" class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition">+</button>
+            </div>
+          </td><td class="py-3 px-3 text-right font-bold text-slate-900 align-middle">40</td><td class="py-3 px-3 text-center align-middle">
+          <button type="button" data-action="delete" data-id="d3" class="text-xs text-slate-400 hover:text-rose-600 px-2 py-1 rounded hover:bg-rose-50 transition">Remove</button>
+        </td></tr></tbody>
+          </table>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden p-8 text-center text-slate-500 text-sm">
+          No matching design codes found. Add a design below or clear your search filter.
+        </div>
+      </section>
+
+      <!-- Add New Design Form -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6">
+        <h2 class="text-base font-semibold text-slate-900 mb-3">Add a Single Design Code</h2>
+        <form id="addDesignForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+          <div>
+            <label for="designCodeInput" class="block text-xs font-medium text-slate-600 mb-1">Design Code *</label>
+            <input id="designCodeInput" type="text" placeholder="e.g., DSN-105" required="" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 uppercase">
+          </div>
+          <div class="sm:col-span-2">
+            <label for="designNameInput" class="block text-xs font-medium text-slate-600 mb-1">Style / Fabric Name</label>
+            <input id="designNameInput" type="text" placeholder="e.g., Rayon Printed Kurti - Maroon" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div>
+            <label for="designRackInput" class="block text-xs font-medium text-slate-600 mb-1">Rack / Shelf</label>
+            <input id="designRackInput" type="text" placeholder="e.g., Rack A-4" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div>
+            <label for="initialQtyInput" class="block text-xs font-medium text-slate-600 mb-1">Start Qty / Size</label>
+            <input id="initialQtyInput" type="number" min="0" max="9999" value="10" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition shadow-sm">
+              + Add Design
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         TAB 2: SCANNER & AUTO-DEDUCT AT DISPATCH
+    =========================================== -->
+    <div id="scannerTab" class="tab-panel space-y-5 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+        <!-- Left Column: Barcode/QR Scanner & Dispatch Form -->
+        <div class="lg:col-span-7 bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-3">
+            <div>
+              <h2 class="text-base font-bold text-slate-900">Dispatch Code Scanner &amp; Auto-Deduct</h2>
+              <p class="text-xs text-slate-500">Scan a garment barcode/QR or type code to deduct stock immediately at dispatch.</p>
+            </div>
+            <!-- Sound Toggle -->
+            <button id="toggleSoundBtn" type="button" class="self-start sm:self-auto text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition">🔊 Beep: ON</button>
+          </div>
+
+          <!-- Scan Action Mode Selector -->
+          <div class="grid grid-cols-2 gap-2 bg-slate-100 p-1.5 rounded-xl">
+            <button type="button" id="modeDispatchBtn" class="py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold bg-rose-600 text-white shadow-sm transition">
+              🚚 Auto-Deduct (Dispatch)
+            </button>
+            <button type="button" id="modeLookupBtn" class="py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition">
+              🔍 Check Stock Info Only
+            </button>
+          </div>
+
+          <!-- Camera Scanner Box -->
+          <div class="bg-slate-900 rounded-xl overflow-hidden text-center relative">
+            <div id="cameraReader" class="w-full max-w-sm mx-auto" style="position: relative;"></div>
+            <div id="cameraPlaceholder" class="p-6 text-slate-300 space-y-3">
+              <div class="text-3xl">📷</div>
+              <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto">
+                Use your Android phone camera to scan garment barcodes/QR codes, or use a handheld USB/Bluetooth scanner below.
+              </p>
+              <div class="flex justify-center gap-2">
+                <button id="startCameraBtn" type="button" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">
+                  Start Camera Scanner
+                </button>
+                <button id="stopCameraBtn" type="button" class="bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition hidden">
+                  Stop Camera
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Test Scan Chips (Great for testing without a physical barcode) -->
+          <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-3">
+            <div class="text-xs font-semibold text-indigo-900 mb-2">⚡ Instant Test Scan (Tap any tag to simulate scanning a packet):</div>
+            <div id="quickScanChips" class="flex flex-wrap gap-1.5"><button type="button" data-sku="DSN-101-M" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-101-M</button><button type="button" data-sku="DSN-101-L" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-101-L</button><button type="button" data-sku="DSN-102-M" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-102-M</button><button type="button" data-sku="DSN-102-L" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-102-L</button><button type="button" data-sku="DSN-103-M" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-103-M</button><button type="button" data-sku="DSN-103-L" class="text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition">🏷️ DSN-103-L</button></div>
+          </div>
+
+          <!-- Manual / Handheld Scanner Input Form -->
+          <form id="scanDispatchForm" class="space-y-3 pt-2 border-t border-slate-200">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="sm:col-span-2">
+                <label for="scanCodeInput" class="block text-xs font-semibold text-slate-700 mb-1">
+                  Scanned Code (e.g. <span class="text-indigo-600">DSN-101-L</span> or <span class="text-indigo-600">DSN-101</span>)
+                </label>
+                <input id="scanCodeInput" type="text" placeholder="Scan barcode or type DSN-101-L..." required="" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm font-mono uppercase focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label for="scanSizeSelect" class="block text-xs font-semibold text-slate-700 mb-1">Size (if not in barcode)</label>
+                <select id="scanSizeSelect" class="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L" selected="">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="3XL">3XL</option>
+                  <option value="4XL">4XL</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label for="scanQtyInput" class="block text-xs font-medium text-slate-600 mb-1">Pieces to Deduct</label>
+                <input id="scanQtyInput" type="number" min="1" max="500" value="1" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div class="sm:col-span-2">
+                <label for="takenByInput" class="block text-xs font-medium text-slate-600 mb-1">Taken By / Packer / Order Ref</label>
+                <input id="takenByInput" type="text" placeholder="e.g., Rahul (Dispatch) or Order #402" value="Dispatch Counter" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+            </div>
+
+            <button id="scanSubmitBtn" type="submit" class="w-full bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-bold text-sm py-3 px-5 rounded-xl shadow-sm transition">
+              🚚 Scan &amp; Deduct from Stock Now
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Column: Scanned Design Stock Card + Dispatch Activity Log -->
+        <div class="lg:col-span-5 space-y-5">
+
+          <!-- Scanned Design Instant Info Card -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-sm font-bold text-slate-900">Last Scanned / Selected Design Info</h3>
+              <span id="scannedCardBadge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700">Live View</span>
+            </div>
+            <div id="scannedDesignCard" class="text-xs text-slate-600 space-y-3">
+          <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <div>
+              <div class="text-base font-bold text-slate-900">DSN-101</div>
+              <div class="text-xs text-slate-500">Cotton Kurta - Indigo Print</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-slate-500">Rack: <strong class="text-slate-800">Rack A-1</strong></div>
+              <div class="text-xs font-bold text-indigo-600">87 Total Pcs</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-7 gap-1.5">
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">S</div>
+              <div class="text-sm font-bold mt-0.5">12</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">M</div>
+              <div class="text-sm font-bold mt-0.5">18</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">L</div>
+              <div class="text-sm font-bold mt-0.5">22</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">XL</div>
+              <div class="text-sm font-bold mt-0.5">15</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">2XL</div>
+              <div class="text-sm font-bold mt-0.5">10</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">3XL</div>
+              <div class="text-sm font-bold mt-0.5">6</div>
+            </div>
+          
+            <div class="border rounded-lg p-2 text-center bg-slate-100 text-slate-800 border-slate-200">
+              <div class="text-[10px] font-bold uppercase">4XL</div>
+              <div class="text-sm font-bold mt-0.5">4</div>
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <!-- Recent Dispatch & Deduction Log -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Recent Dispatch Log</h3>
+                <p class="text-[11px] text-slate-500">Every piece deducted is recorded with staff/order name.</p>
+              </div>
+              <button id="clearLogBtn" type="button" class="text-xs text-slate-400 hover:text-rose-600 transition">
+                Clear Log
+              </button>
+            </div>
+            <div id="dispatchLogList" class="space-y-2 max-h-72 overflow-y-auto pr-1"><p class="text-xs text-slate-400 py-4 text-center">No dispatches logged yet. Scan a design code to deduct stock!</p></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         TAB 3: BULK UPLOAD CODES & FULL STOCK INFO
+    =========================================== -->
+    <div id="uploadTab" class="tab-panel space-y-5 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+        <!-- Left: Upload CSV / Paste Codes -->
+        <div class="lg:col-span-6 bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6 space-y-4">
+          <div>
+            <h2 class="text-base font-bold text-slate-900">Upload Design Codes (CSV or Paste)</h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Upload your factory stock sheet or paste codes below. The app automatically loads every design's details and size counts (<strong class="text-slate-700">S to 4XL</strong>) and shows a full summary report.
+            </p>
+          </div>
+
+          <!-- File Upload Input -->
+          <div class="border-2 border-dashed border-indigo-200 bg-indigo-50/40 rounded-xl p-4 text-center space-y-2">
+            <label for="csvFileInput" class="cursor-pointer block">
+              <span class="text-2xl block mb-1">📄</span>
+              <span class="text-xs sm:text-sm font-semibold text-indigo-700 underline">Choose a CSV / Text File to Upload</span>
+              <span class="block text-[11px] text-slate-500 mt-0.5">Format: Code, Name, Rack, Rate, S, M, L, XL, 2XL, 3XL, 4XL</span>
+            </label>
+            <input id="csvFileInput" type="file" accept=".csv,.txt" class="hidden">
+          </div>
+
+          <!-- Or Paste Codes Directly -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="bulkPasteArea" class="text-xs font-semibold text-slate-700">Or Paste Design Codes &amp; Stock Rows:</label>
+              <button id="fillSampleBulkBtn" type="button" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800">
+                + Load Sample Batch
+              </button>
+            </div>
+            <textarea id="bulkPasteArea" rows="5" placeholder="DSN-201, Festive Silk Kurta, Rack C1, 650, 10, 15, 20, 15, 10, 8, 5
+DSN-202, Denim Jacket Mens, Rack D4, 890, 5, 12, 18, 14, 8, 4, 2" class="w-full rounded-xl border border-slate-300 p-3 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <div class="flex flex-wrap gap-2">
+              <button id="processBulkUploadBtn" type="button" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs sm:text-sm py-2.5 px-4 rounded-xl transition shadow-sm">
+                📥 Upload &amp; Show Stock Information
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Uploaded / Selected Code Full Information Inspector -->
+        <div class="lg:col-span-6 bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+            <div>
+              <h2 class="text-base font-bold text-slate-900">Complete Stock Information Viewer</h2>
+              <p class="text-xs text-slate-500">Select any design code to inspect size breakdown, rack, valuation, and printable barcode tags.</p>
+            </div>
+            <select id="inspectorSelect" aria-label="Select design code to inspect" class="rounded-xl border border-slate-300 px-3 py-2 text-xs font-bold text-slate-800 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500"><option value="DSN-101" selected="">DSN-101 — Cotton Kurta - Indigo Print</option><option value="DSN-102">DSN-102 — Linen Casual Shirt - Olive</option><option value="DSN-103">DSN-103 — Festive Embroidered Set</option></select>
+          </div>
+
+          <div id="fullStockInspector" class="space-y-4">
+        <div class="grid grid-cols-3 gap-2.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-center">
+          <div>
+            <div class="text-[11px] text-slate-500">Rack / Bin</div>
+            <div class="text-sm font-bold text-slate-900">Rack A-1</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-slate-500">Total Stock</div>
+            <div class="text-sm font-bold text-indigo-600">87 Pcs</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-slate-500">Stock Value (₹450/pc)</div>
+            <div class="text-sm font-bold text-emerald-700">₹39,150</div>
+          </div>
+        </div>
+        <div class="space-y-2.5 pt-1">
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size S <span class="font-mono text-[11px] text-slate-400">(DSN-101-S)</span></span>
+              <span class="font-bold text-slate-900">12 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 48%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size M <span class="font-mono text-[11px] text-slate-400">(DSN-101-M)</span></span>
+              <span class="font-bold text-slate-900">18 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 72%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size L <span class="font-mono text-[11px] text-slate-400">(DSN-101-L)</span></span>
+              <span class="font-bold text-slate-900">22 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 88%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size XL <span class="font-mono text-[11px] text-slate-400">(DSN-101-XL)</span></span>
+              <span class="font-bold text-slate-900">15 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 60%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size 2XL <span class="font-mono text-[11px] text-slate-400">(DSN-101-2XL)</span></span>
+              <span class="font-bold text-slate-900">10 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 40%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size 3XL <span class="font-mono text-[11px] text-slate-400">(DSN-101-3XL)</span></span>
+              <span class="font-bold text-slate-900">6 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 24%"></div>
+            </div>
+          </div>
+        
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size 4XL <span class="font-mono text-[11px] text-slate-400">(DSN-101-4XL)</span></span>
+              <span class="font-bold text-slate-900">4 pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 16%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================
+         TAB 4: ANDROID DEVICE & GITHUB HOSTING
+    =========================================== -->
+    <div id="androidTab" class="tab-panel space-y-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <!-- Download & Android Install Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700">
+            <span>📱 Ready for Android &amp; Offline Use</span>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900">Download &amp; Run on Any Android Phone</h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            This app is built as a <strong>Single-File Progressive Web App (PWA)</strong>. It works on every Android phone, tablet, or warehouse PC without needing the Play Store or a monthly server fee.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <button id="downloadAppHtmlBtn" type="button" class="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-3 px-4 rounded-xl shadow-sm transition">
+              <span>📲 Download Standalone App File (index.html)</span>
+            </button>
+            <button id="downloadStockCsvBtn" type="button" class="w-full flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm py-2.5 px-4 rounded-xl transition">
+              <span>📊 Download Current Stock Sheet (.csv)</span>
+            </button>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 space-y-2 text-xs text-slate-600">
+            <div class="font-bold text-slate-800">How to Install as an App on Android Chrome:</div>
+            <ol class="list-decimal list-inside space-y-1">
+              <li>Open your hosted GitHub link (or downloaded file) in <strong>Chrome on Android</strong>.</li>
+              <li>Tap the <strong>three dots menu (⋮)</strong> in the top-right corner of Chrome.</li>
+              <li>Tap <strong>"Add to Home screen"</strong> or <strong>"Install app"</strong>.</li>
+              <li>It now appears on your Android home screen with its own icon and opens full-screen!</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- GitHub Upload & Share Guide -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700">
+            <span>🌐 Share via GitHub</span>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900">How Anyone Can Download or Use It from Your GitHub</h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Follow these 4 beginner steps to put this app on your GitHub so your team or anyone else can run it on Android or download it:
+          </p>
+
+          <ol class="space-y-3 text-xs sm:text-sm text-slate-700">
+            <li class="flex gap-3 items-start">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+              <div>
+                <strong class="text-slate-900">Download the App File:</strong> Click the <strong>"Download Standalone App File (index.html)"</strong> button on the left.
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+              <div>
+                <strong class="text-slate-900">Create a GitHub Repository:</strong> Sign in to GitHub, tap <strong>New Repository</strong>, name it <code class="bg-slate-100 px-1.5 py-0.5 rounded text-indigo-700">cloth-stock-app</code>, and set it to <strong>Public</strong>.
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+              <div>
+                <strong class="text-slate-900">Upload <code class="bg-slate-100 px-1 rounded">index.html</code>:</strong> Tap <strong>"Add file → Upload files"</strong>, select your downloaded <code class="bg-slate-100 px-1 rounded">index.html</code> file, and tap <strong>Commit changes</strong>.
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+              <div>
+                <strong class="text-slate-900">Enable Free Live App Link (GitHub Pages):</strong> Go to <strong>Settings → Pages</strong>, choose branch <strong>main</strong>, and click <strong>Save</strong>. You'll get a live link (<code class="bg-slate-100 px-1 rounded">https://yourname.github.io/cloth-stock-app/</code>) that opens directly on any Android phone!
+              </div>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar (For Easy Thumb Use on Android Phones) -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-2 py-1.5 flex md:hidden justify-around items-center z-40 shadow-lg">
+    <button type="button" data-tab="inventoryTab" class="tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-slate-500">
+      <span class="text-base">📦</span>
+      <span>Stock</span>
+    </button>
+    <button type="button" data-tab="scannerTab" class="tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-slate-500">
+      <span class="text-base">📷</span>
+      <span>Scan/Dispatch</span>
+    </button>
+    <button type="button" data-tab="uploadTab" class="tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-slate-500">
+      <span class="text-base">📂</span>
+      <span>Upload/Info</span>
+    </button>
+    <button type="button" data-tab="androidTab" class="tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-indigo-600">
+      <span class="text-base">📱</span>
+      <span>Android/Git</span>
+    </button>
+  </div>
+
+  <!-- 4. App Logic (JavaScript) -->
+  <script>
+    // Standard garment sizes from S to 4XL
+    const SIZES = ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'];
+    const STORAGE_KEY = 'cloth_stock_tracker_v2';
+    const LOG_STORAGE_KEY = 'cloth_dispatch_log_v2';
+
+    // Default sample designs with extended metadata (rack, rate, category)
+    const SAMPLE_DESIGNS = [
+      {
+        id: 'd1',
+        code: 'DSN-101',
+        name: 'Cotton Kurta - Indigo Print',
+        rack: 'Rack A-1',
+        rate: 450,
+        stock: { S: 12, M: 18, L: 20, XL: 15, '2XL': 10, '3XL': 6, '4XL': 4 }
+      },
+      {
+        id: 'd2',
+        code: 'DSN-102',
+        name: 'Linen Casual Shirt - Olive',
+        rack: 'Rack B-3',
+        rate: 580,
+        stock: { S: 8, M: 14, L: 16, XL: 12, '2XL': 8, '3XL': 3, '4XL': 2 }
+      },
+      {
+        id: 'd3',
+        code: 'DSN-103',
+        name: 'Festive Embroidered Set',
+        rack: 'Rack C-2',
+        rate: 920,
+        stock: { S: 5, M: 10, L: 10, XL: 8, '2XL': 5, '3XL': 2, '4XL': 0 }
+      }
+    ];
+
+    let designs = loadDesigns();
+    let dispatchLog = loadDispatchLog();
+    let scanMode = 'dispatch'; // 'dispatch' or 'lookup'
+    let soundEnabled = true;
+    let selectedInspectCode = designs[0] ? designs[0].code : '';
+    let html5QrScanner = null;
+    // PWA manifest is provided as a static file (manifest.json).
+
+    function loadDesigns() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed;
+          }
+        }
+      } catch (err) {}
+      return JSON.parse(JSON.stringify(SAMPLE_DESIGNS));
+    }
+
+    function saveDesigns() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(designs));
+      } catch (err) {}
+    }
+
+    function loadDispatchLog() {
+      try {
+        const saved = localStorage.getItem(LOG_STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) return parsed;
+        }
+      } catch (err) {}
+      return [
+        {
+          id: 'log_sample_1',
+          code: 'DSN-101',
+          size: 'L',
+          qty: 2,
+          takenBy: 'Order #108 (Packer: Amit)',
+          time: '10:00 AM'
+        }
+      ];
+    }
+
+    function saveDispatchLog() {
+      try {
+        localStorage.setItem(LOG_STORAGE_KEY, JSON.stringify(dispatchLog));
+      } catch (err) {}
+    }
+
+    // Play a short confirmation beep on scan/deduct using Web Audio API
+    function playBeep(isSuccess = true) {
+      if (!soundEnabled) return;
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = isSuccess ? 'sine' : 'sawtooth';
+        osc.frequency.setValueAtTime(isSuccess ? 880 : 240, ctx.currentTime);
+        gain.gain.setValueAtTime(0.12, ctx.currentTime);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + (isSuccess ? 0.12 : 0.25));
+      } catch (e) {}
+    }
+
+    // Show a helpful status message
+    function showFeedback(message, isError = false) {
+      const banner = document.getElementById('feedbackBanner');
+      banner.textContent = message;
+      banner.className = isError
+        ? 'text-xs sm:text-sm font-medium px-4 py-3 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 shadow-sm'
+        : 'text-xs sm:text-sm font-medium px-4 py-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-sm';
+      clearTimeout(banner._timer);
+      banner._timer = setTimeout(() => {
+        banner.className = 'hidden text-xs sm:text-sm font-medium px-4 py-3 rounded-xl';
+      }, 4000);
+    }
+
+    // Switch Tabs
+    function switchTab(targetId) {
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.toggle('hidden', panel.id !== targetId);
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const isCurrent = btn.getAttribute('data-tab') === targetId;
+        if (btn.closest('nav')) {
+          btn.className = isCurrent
+            ? 'tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white shadow-sm transition'
+            : 'tab-btn flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition';
+        } else {
+          btn.className = isCurrent
+            ? 'tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-indigo-600'
+            : 'tab-btn flex flex-col items-center py-1 px-3 rounded-lg text-[11px] font-semibold text-slate-500';
+        }
+      });
+    }
+
+    // Adjust stock count for a specific design and size (+1 or -1)
+    function updateStock(designId, size, change, takenByLabel = 'Quick Table Tap') {
+      const item = designs.find(d => d.id === designId);
+      if (!item) return;
+
+      const currentQty = item.stock[size] || 0;
+      if (change < 0 && currentQty <= 0) {
+        playBeep(false);
+        showFeedback(`Out of stock! ${item.code} (${size}) has 0 pieces available.`, true);
+        return;
+      }
+
+      const nextQty = Math.max(0, currentQty + change);
+      item.stock[size] = nextQty;
+
+      // Record in dispatch log if stock was deducted
+      if (change < 0) {
+        const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        dispatchLog.unshift({
+          id: 'log_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+          code: item.code,
+          size: size,
+          qty: Math.abs(change),
+          takenBy: takenByLabel,
+          time: nowStr
+        });
+        saveDispatchLog();
+      }
+
+      selectedInspectCode = item.code;
+      saveDesigns();
+      renderAll();
+    }
+
+    // Delete a design row
+    function deleteDesign(designId) {
+      designs = designs.filter(d => d.id !== designId);
+      if (designs.length > 0 && !designs.some(d => d.code === selectedInspectCode)) {
+        selectedInspectCode = designs[0].code;
+      }
+      saveDesigns();
+      renderAll();
+    }
+
+    // Parse a scanned barcode like "DSN-101-XL" or "DSN-101"
+    function parseScannedString(rawInput, fallbackSize) {
+      const cleaned = rawInput.trim().toUpperCase();
+      // Check if it ends with -SIZE (e.g., DSN-101-2XL)
+      for (const sz of SIZES) {
+        const suffix = '-' + sz;
+        if (cleaned.endsWith(suffix)) {
+          const baseCode = cleaned.slice(0, cleaned.length - suffix.length);
+          const match = designs.find(d => d.code.toUpperCase() === baseCode);
+          if (match) {
+            return { design: match, size: sz };
+          }
+        }
+      }
+      // Otherwise match whole code as Design Code
+      const directMatch = designs.find(d => d.code.toUpperCase() === cleaned);
+      return { design: directMatch || null, size: fallbackSize };
+    }
+
+    // Handle a scan or manual dispatch submission
+    function handleScanOrDispatch(rawCode, fallbackSize, qty, takenBy) {
+      const { design, size } = parseScannedString(rawCode, fallbackSize);
+
+      if (!design) {
+        playBeep(false);
+        showFeedback(`Design code "${rawCode.toUpperCase()}" not found in inventory. Upload or add it first!`, true);
+        return;
+      }
+
+      selectedInspectCode = design.code;
+      document.getElementById('scanSizeSelect').value = size;
+
+      if (scanMode === 'lookup') {
+        playBeep(true);
+        renderAll();
+        showFeedback(`Loaded stock info for ${design.code} (${design.name || 'Standard'}).`);
+        return;
+      }
+
+      // Dispatch / Auto-Deduct Mode
+      const avail = design.stock[size] || 0;
+      if (avail < qty) {
+        playBeep(false);
+        renderAll();
+        showFeedback(`Cannot deduct ${qty} pcs of ${design.code} [${size}] — only ${avail} pcs in stock!`, true);
+        return;
+      }
+
+      design.stock[size] = avail - qty;
+      const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      dispatchLog.unshift({
+        id: 'log_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+        code: design.code,
+        size: size,
+        qty: qty,
+        takenBy: takenBy || 'Dispatch Scanner',
+        time: nowStr
+      });
+
+      playBeep(true);
+      saveDesigns();
+      saveDispatchLog();
+      renderAll();
+      showFeedback(`Dispatched ${qty} pc(s) of ${design.code} (Size ${size}) — Taken by: ${takenBy || 'Dispatch'}. Remaining: ${design.stock[size]}`);
+    }
+
+    // Undo a dispatch log entry (adds the stock back)
+    function undoDispatchEntry(logId) {
+      const idx = dispatchLog.findIndex(item => item.id === logId);
+      if (idx === -1) return;
+      const entry = dispatchLog[idx];
+      const design = designs.find(d => d.code === entry.code);
+      if (design && SIZES.includes(entry.size)) {
+        design.stock[entry.size] = (design.stock[entry.size] || 0) + entry.qty;
+        saveDesigns();
+      }
+      dispatchLog.splice(idx, 1);
+      saveDispatchLog();
+      renderAll();
+      showFeedback(`Restored ${entry.qty} pc(s) of ${entry.code} (${entry.size}) back to stock.`);
+    }
+
+    // Render Main Inventory Table
+    function renderInventory() {
+      const tbody = document.getElementById('inventoryTableBody');
+      const emptyState = document.getElementById('emptyState');
+      const searchQuery = (document.getElementById('searchDesignInput').value || '').trim().toUpperCase();
+      const filterMode = document.getElementById('stockFilterSelect').value;
+
+      tbody.innerHTML = '';
+
+      let grandTotal = 0;
+      designs.forEach(item => {
+        SIZES.forEach(sz => {
+          grandTotal += (item.stock[sz] || 0);
+        });
+      });
+
+      const filtered = designs.filter(item => {
+        const matchesSearch =
+          !searchQuery ||
+          item.code.toUpperCase().includes(searchQuery) ||
+          (item.name && item.name.toUpperCase().includes(searchQuery)) ||
+          (item.rack && item.rack.toUpperCase().includes(searchQuery));
+
+        if (!matchesSearch) return false;
+
+        let rowSum = 0;
+        let hasLow = false;
+        SIZES.forEach(sz => {
+          const q = item.stock[sz] || 0;
+          rowSum += q;
+          if (q <= 3) hasLow = true;
+        });
+
+        if (filterMode === 'low') return hasLow;
+        if (filterMode === 'instock') return rowSum > 20;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+
+      filtered.forEach(item => {
+        let rowTotal = 0;
+        SIZES.forEach(sz => {
+          rowTotal += (item.stock[sz] || 0);
+        });
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50/90 transition';
+
+        // Design Code & Name cell (clickable to inspect)
+        const codeTd = document.createElement('td');
+        codeTd.className = 'py-3 px-4 align-middle';
+        codeTd.innerHTML = `
+          <button type="button" data-action="inspect" data-code="${escapeHtml(item.code)}" class="text-left group">
+            <div class="font-bold text-indigo-700 group-hover:underline flex items-center gap-1.5">
+              <span>${escapeHtml(item.code)}</span>
+              ${item.rack ? `<span class="text-[10px] font-medium bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">${escapeHtml(item.rack)}</span>` : ''}
+            </div>
+            <div class="text-xs text-slate-500 truncate max-w-[180px]">${escapeHtml(item.name || 'Standard Design')}</div>
+          </button>
+        `;
+        tr.appendChild(codeTd);
+
+        // Size cells (S to 4XL)
+        SIZES.forEach(size => {
+          const qty = item.stock[size] || 0;
+          const td = document.createElement('td');
+          td.className = 'py-2.5 px-1 text-center align-middle';
+
+          let badgeColor = 'bg-slate-100 text-slate-800';
+          if (qty === 0) {
+            badgeColor = 'bg-rose-100 text-rose-700 font-bold';
+          } else if (qty <= 3) {
+            badgeColor = 'bg-amber-100 text-amber-800 font-semibold';
+          }
+
+          td.innerHTML = `
+            <div class="inline-flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+              <button
+                type="button"
+                data-action="decrement"
+                data-id="${item.id}"
+                data-size="${size}"
+                title="Deduct 1 piece (${size})"
+                class="w-6 h-6 flex items-center justify-center rounded text-rose-600 hover:bg-rose-50 active:bg-rose-100 font-bold text-sm transition"
+              >&minus;</button>
+              <span class="min-w-[26px] text-center text-xs px-1 py-0.5 rounded mx-0.5 ${badgeColor}">${qty}</span>
+              <button
+                type="button"
+                data-action="increment"
+                data-id="${item.id}"
+                data-size="${size}"
+                title="Add 1 piece (${size})"
+                class="w-6 h-6 flex items-center justify-center rounded text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 font-bold text-sm transition"
+              >+</button>
+            </div>
+          `;
+          tr.appendChild(td);
+        });
+
+        // Row Total cell
+        const totalTd = document.createElement('td');
+        totalTd.className = 'py-3 px-3 text-right font-bold text-slate-900 align-middle';
+        totalTd.textContent = rowTotal;
+        tr.appendChild(totalTd);
+
+        // Action cell
+        const actionTd = document.createElement('td');
+        actionTd.className = 'py-3 px-3 text-center align-middle';
+        actionTd.innerHTML = `
+          <button
+            type="button"
+            data-action="delete"
+            data-id="${item.id}"
+            class="text-xs text-slate-400 hover:text-rose-600 px-2 py-1 rounded hover:bg-rose-50 transition"
+          >Remove</button>
+        `;
+        tr.appendChild(actionTd);
+
+        tbody.appendChild(tr);
+      });
+
+      // Update top summary counters
+      document.getElementById('totalDesignsCount').textContent = designs.length;
+      document.getElementById('grandTotalPieces').textContent = grandTotal;
+
+      const totalDispatched = dispatchLog.reduce((acc, entry) => acc + (entry.qty || 0), 0);
+      document.getElementById('totalDispatchedCount').textContent = totalDispatched;
+    }
+
+    // Render Scanner Quick Chips, Last Scanned Card, and Dispatch Log
+    function renderScannerTab() {
+      const chipsContainer = document.getElementById('quickScanChips');
+      chipsContainer.innerHTML = '';
+
+      designs.slice(0, 4).forEach(d => {
+        ['M', 'L', 'XL', '2XL'].slice(0, 2).forEach(sz => {
+          const sku = `${d.code}-${sz}`;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.setAttribute('data-sku', sku);
+          btn.className = 'text-xs font-mono font-semibold bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded-lg shadow-sm transition';
+          btn.textContent = `🏷️ ${sku}`;
+          chipsContainer.appendChild(btn);
+        });
+      });
+
+      // Render Last Scanned / Selected Design Card
+      const cardContainer = document.getElementById('scannedDesignCard');
+      const current = designs.find(d => d.code === selectedInspectCode) || designs[0];
+      if (!current) {
+        cardContainer.innerHTML = '<p class="text-slate-400">No design available.</p>';
+      } else {
+        let totalPcs = 0;
+        const sizePills = SIZES.map(sz => {
+          const q = current.stock[sz] || 0;
+          totalPcs += q;
+          const color = q === 0 ? 'bg-rose-100 text-rose-700 border-rose-200' : q <= 3 ? 'bg-amber-100 text-amber-800 border-amber-200' : 'bg-slate-100 text-slate-800 border-slate-200';
+          return `
+            <div class="border rounded-lg p-2 text-center ${color}">
+              <div class="text-[10px] font-bold uppercase">${sz}</div>
+              <div class="text-sm font-bold mt-0.5">${q}</div>
+            </div>
+          `;
+        }).join('');
+
+        cardContainer.innerHTML = `
+          <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <div>
+              <div class="text-base font-bold text-slate-900">${escapeHtml(current.code)}</div>
+              <div class="text-xs text-slate-500">${escapeHtml(current.name || 'Standard Garment')}</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-slate-500">Rack: <strong class="text-slate-800">${escapeHtml(current.rack || 'Main')}</strong></div>
+              <div class="text-xs font-bold text-indigo-600">${totalPcs} Total Pcs</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-7 gap-1.5">${sizePills}</div>
+        `;
+      }
+
+      // Render Dispatch Log
+      const logList = document.getElementById('dispatchLogList');
+      if (dispatchLog.length === 0) {
+        logList.innerHTML = '<p class="text-xs text-slate-400 py-4 text-center">No dispatches logged yet. Scan a design code to deduct stock!</p>';
+      } else {
+        logList.innerHTML = dispatchLog.map(entry => `
+          <div class="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs">
+            <div>
+              <span class="font-bold text-slate-900">${escapeHtml(entry.code)}</span>
+              <span class="inline-block bg-indigo-100 text-indigo-800 font-bold px-1.5 py-0.5 rounded mx-1">Size ${escapeHtml(entry.size)}</span>
+              <span class="text-rose-600 font-bold">&minus;${entry.qty} pcs</span>
+              <div class="text-[11px] text-slate-500 mt-0.5">👤 ${escapeHtml(entry.takenBy)} &bull; ${escapeHtml(entry.time)}</div>
+            </div>
+            <button
+              type="button"
+              data-undo-id="${entry.id}"
+              class="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 bg-white border border-slate-200 px-2 py-1 rounded-lg shadow-sm"
+            >Undo</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Render Tab 3: Inspector & Dropdown
+    function renderInspectorTab() {
+      const select = document.getElementById('inspectorSelect');
+      const container = document.getElementById('fullStockInspector');
+
+      select.innerHTML = designs.map(d =>
+        `<option value="${escapeHtml(d.code)}" ${d.code === selectedInspectCode ? 'selected' : ''}>${escapeHtml(d.code)} — ${escapeHtml(d.name || 'Design')}</option>`
+      ).join('');
+
+      const item = designs.find(d => d.code === selectedInspectCode) || designs[0];
+      if (!item) {
+        container.innerHTML = '<p class="text-xs text-slate-400">No design selected.</p>';
+        return;
+      }
+
+      let totalPcs = 0;
+      SIZES.forEach(sz => { totalPcs += (item.stock[sz] || 0); });
+      const unitRate = item.rate || 450;
+      const totalValue = totalPcs * unitRate;
+
+      const sizeBars = SIZES.map(sz => {
+        const q = item.stock[sz] || 0;
+        const pct = Math.min(100, Math.round((q / 25) * 100));
+        const barColor = q === 0 ? 'bg-rose-500' : q <= 3 ? 'bg-amber-500' : 'bg-indigo-600';
+        return `
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-bold text-slate-700">Size ${sz} <span class="font-mono text-[11px] text-slate-400">(${escapeHtml(item.code)}-${sz})</span></span>
+              <span class="font-bold ${q === 0 ? 'text-rose-600' : 'text-slate-900'}">${q} pcs</span>
+            </div>
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="${barColor} h-full rounded-full transition-all" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="grid grid-cols-3 gap-2.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-center">
+          <div>
+            <div class="text-[11px] text-slate-500">Rack / Bin</div>
+            <div class="text-sm font-bold text-slate-900">${escapeHtml(item.rack || 'Rack A-1')}</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-slate-500">Total Stock</div>
+            <div class="text-sm font-bold text-indigo-600">${totalPcs} Pcs</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-slate-500">Stock Value (₹${unitRate}/pc)</div>
+            <div class="text-sm font-bold text-emerald-700">₹${totalValue.toLocaleString()}</div>
+          </div>
+        </div>
+        <div class="space-y-2.5 pt-1">${sizeBars}</div>
+      `;
+    }
+
+    function renderAll() {
+      renderInventory();
+      renderScannerTab();
+      renderInspectorTab();
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // Parse CSV / Bulk Text Lines
+    function importBulkLines(text) {
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      let added = 0;
+      let updated = 0;
+
+      lines.forEach(line => {
+        const parts = line.split(',').map(p => p.trim());
+        if (parts.length < 2) return;
+        const code = parts[0].toUpperCase();
+        if (code === 'CODE' || code === 'DESIGN CODE') return; // skip header row
+
+        const name = parts[1] || 'Uploaded Garment Design';
+        const rack = parts[2] || 'Rack A-1';
+        const rate = parseInt(parts[3], 10) || 450;
+
+        const stockObj = {};
+        SIZES.forEach((sz, idx) => {
+          const val = parseInt(parts[4 + idx], 10);
+          stockObj[sz] = isNaN(val) ? 10 : Math.max(0, val);
+        });
+
+        const existing = designs.find(d => d.code.toUpperCase() === code);
+        if (existing) {
+          existing.name = name;
+          existing.rack = rack;
+          existing.rate = rate;
+          existing.stock = stockObj;
+          updated++;
+        } else {
+          designs.unshift({
+            id: 'd_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+            code,
+            name,
+            rack,
+            rate,
+            stock: stockObj
+          });
+          added++;
+        }
+        selectedInspectCode = code;
+      });
+
+      saveDesigns();
+      renderAll();
+      showFeedback(`Bulk upload complete: ${added} new design(s) added, ${updated} design(s) updated!`);
+    }
+
+    // Export Current Inventory to CSV
+    function exportInventoryCsv() {
+      const headers = ['Design Code', 'Style Name', 'Rack', 'Rate', ...SIZES, 'Total Pieces'];
+      const rows = designs.map(d => {
+        let sum = 0;
+        const counts = SIZES.map(sz => {
+          const q = d.stock[sz] || 0;
+          sum += q;
+          return q;
+        });
+        return [
+          d.code,
+          `"${(d.name || '').replace(/"/g, '""')}"`,
+          `"${(d.rack || 'Main').replace(/"/g, '""')}"`,
+          d.rate || 450,
+          ...counts,
+          sum
+        ].join(',');
+      });
+
+      const csvContent = [headers.join(','), ...rows].join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'cloth_design_stock_S_to_4XL.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showFeedback('Downloaded stock sheet as cloth_design_stock_S_to_4XL.csv');
+    }
+
+    // Download Standalone HTML file for GitHub / Android
+    function downloadStandaloneHtml() {
+      const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showFeedback('Downloaded standalone app file (index.html) — ready for GitHub or Android!');
+    }
+
+    // Event Listeners: Navigation Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab(btn.getAttribute('data-tab'));
+      });
+    });
+
+    // Event Listeners: Inventory Table (+ / - / Remove / Inspect)
+    document.getElementById('inventoryTableBody').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+
+      const action = btn.getAttribute('data-action');
+      const id = btn.getAttribute('data-id');
+      const size = btn.getAttribute('data-size');
+
+      if (action === 'increment') {
+        updateStock(id, size, 1);
+      } else if (action === 'decrement') {
+        updateStock(id, size, -1, 'Quick Table Deduct');
+      } else if (action === 'delete') {
+        deleteDesign(id);
+      } else if (action === 'inspect') {
+        selectedInspectCode = btn.getAttribute('data-code');
+        renderAll();
+        switchTab('uploadTab');
+      }
+    });
+
+    // Search & Filter listeners
+    document.getElementById('searchDesignInput').addEventListener('input', renderInventory);
+    document.getElementById('stockFilterSelect').addEventListener('change', renderInventory);
+
+    // Add Single Design Form
+    document.getElementById('addDesignForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const codeInput = document.getElementById('designCodeInput');
+      const nameInput = document.getElementById('designNameInput');
+      const rackInput = document.getElementById('designRackInput');
+      const qtyInput = document.getElementById('initialQtyInput');
+
+      const cleanCode = codeInput.value.trim().toUpperCase();
+      const cleanName = nameInput.value.trim();
+      const cleanRack = rackInput.value.trim() || 'Rack A-1';
+      const startQty = Math.max(0, parseInt(qtyInput.value, 10) || 0);
+
+      if (!cleanCode) return;
+
+      if (designs.some(d => d.code.toUpperCase() === cleanCode)) {
+        showFeedback(`Design code "${cleanCode}" already exists in your table.`, true);
+        return;
+      }
+
+      const newStock = {};
+      SIZES.forEach(sz => { newStock[sz] = startQty; });
+
+      designs.unshift({
+        id: 'd_' + Date.now(),
+        code: cleanCode,
+        name: cleanName || 'Custom Garment Design',
+        rack: cleanRack,
+        rate: 450,
+        stock: newStock
+      });
+
+      selectedInspectCode = cleanCode;
+      saveDesigns();
+      renderAll();
+
+      codeInput.value = '';
+      nameInput.value = '';
+      rackInput.value = '';
+      showFeedback(`Added design "${cleanCode}" with ${startQty} pieces per size (S to 4XL).`);
+    });
+
+    // Scanner Mode Toggle
+    document.getElementById('modeDispatchBtn').addEventListener('click', () => {
+      scanMode = 'dispatch';
+      document.getElementById('modeDispatchBtn').className = 'py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold bg-rose-600 text-white shadow-sm transition';
+      document.getElementById('modeLookupBtn').className = 'py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition';
+      document.getElementById('scanSubmitBtn').textContent = '🚚 Scan & Deduct from Stock Now';
+      document.getElementById('scanSubmitBtn').className = 'w-full bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-bold text-sm py-3 px-5 rounded-xl shadow-sm transition';
+    });
+
+    document.getElementById('modeLookupBtn').addEventListener('click', () => {
+      scanMode = 'lookup';
+      document.getElementById('modeLookupBtn').className = 'py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold bg-indigo-600 text-white shadow-sm transition';
+      document.getElementById('modeDispatchBtn').className = 'py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition';
+      document.getElementById('scanSubmitBtn').textContent = '🔍 Inspect Design Stock Details';
+      document.getElementById('scanSubmitBtn').className = 'w-full bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-sm py-3 px-5 rounded-xl shadow-sm transition';
+    });
+
+    // Sound Toggle
+    document.getElementById('toggleSoundBtn').addEventListener('click', (e) => {
+      soundEnabled = !soundEnabled;
+      e.currentTarget.textContent = soundEnabled ? '🔊 Beep: ON' : '🔇 Beep: OFF';
+    });
+
+    // Quick Test Scan Chips
+    document.getElementById('quickScanChips').addEventListener('click', (e) => {
+      const chip = e.target.closest('button[data-sku]');
+      if (!chip) return;
+      const sku = chip.getAttribute('data-sku');
+      document.getElementById('scanCodeInput').value = sku;
+      const qty = Math.max(1, parseInt(document.getElementById('scanQtyInput').value, 10) || 1);
+      const takenBy = document.getElementById('takenByInput').value.trim();
+      handleScanOrDispatch(sku, document.getElementById('scanSizeSelect').value, qty, takenBy);
+    });
+
+    // Manual / Barcode Form Submit
+    document.getElementById('scanDispatchForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const rawCode = document.getElementById('scanCodeInput').value;
+      const sz = document.getElementById('scanSizeSelect').value;
+      const qty = Math.max(1, parseInt(document.getElementById('scanQtyInput').value, 10) || 1);
+      const takenBy = document.getElementById('takenByInput').value.trim();
+      if (!rawCode.trim()) return;
+      handleScanOrDispatch(rawCode, sz, qty, takenBy);
+      document.getElementById('scanCodeInput').value = '';
+    });
+
+    // Dispatch Log Undo & Clear
+    document.getElementById('dispatchLogList').addEventListener('click', (e) => {
+      const undoBtn = e.target.closest('button[data-undo-id]');
+      if (!undoBtn) return;
+      undoDispatchEntry(undoBtn.getAttribute('data-undo-id'));
+    });
+
+    document.getElementById('clearLogBtn').addEventListener('click', () => {
+      dispatchLog = [];
+      saveDispatchLog();
+      renderAll();
+      showFeedback('Dispatch log cleared.');
+    });
+
+    // Camera Barcode Scanner (html5-qrcode)
+    document.getElementById('startCameraBtn').addEventListener('click', () => {
+      if (typeof Html5Qrcode === 'undefined') {
+        showFeedback('Camera scanner library unavailable; use the Instant Test Scan chips or input box below.', true);
+        return;
+      }
+      try {
+        html5QrScanner = new Html5Qrcode('cameraReader');
+        document.getElementById('startCameraBtn').classList.add('hidden');
+        document.getElementById('stopCameraBtn').classList.remove('hidden');
+        html5QrScanner.start(
+          { facingMode: 'environment' },
+          { fps: 10, qrbox: { width: 220, height: 120 } },
+          (decodedText) => {
+            document.getElementById('scanCodeInput').value = decodedText;
+            const qty = Math.max(1, parseInt(document.getElementById('scanQtyInput').value, 10) || 1);
+            const takenBy = document.getElementById('takenByInput').value.trim();
+            handleScanOrDispatch(decodedText, document.getElementById('scanSizeSelect').value, qty, takenBy);
+          },
+          () => {}
+        ).catch(() => {
+          document.getElementById('startCameraBtn').classList.remove('hidden');
+          document.getElementById('stopCameraBtn').classList.add('hidden');
+          showFeedback('Camera access blocked in preview frame — use the Instant Test Scan tags below or open on your Android phone!', true);
+        });
+      } catch (err) {
+        showFeedback('Could not start camera in preview — try the Instant Test Scan tags below!', true);
+      }
+    });
+
+    document.getElementById('stopCameraBtn').addEventListener('click', () => {
+      if (html5QrScanner) {
+        html5QrScanner.stop().then(() => {
+          html5QrScanner.clear();
+          document.getElementById('startCameraBtn').classList.remove('hidden');
+          document.getElementById('stopCameraBtn').classList.add('hidden');
+        }).catch(() => {});
+      }
+    });
+
+    // Bulk Upload Tab Listeners
+    document.getElementById('fillSampleBulkBtn').addEventListener('click', () => {
+      document.getElementById('bulkPasteArea').value = [
+        'DSN-201, Festive Silk Kurta - Gold, Rack C-1, 650, 10, 15, 20, 15, 10, 8, 5',
+        'DSN-202, Mens Denim Casual Shirt, Rack D-4, 790, 6, 12, 18, 14, 8, 4, 2',
+        'DSN-203, Printed Cotton Co-Ord Set, Rack A-3, 520, 14, 20, 22, 18, 12, 6, 4'
+      ].join('\n');
+      showFeedback('Sample batch loaded! Click "Upload & Show Stock Information" to import.');
+    });
+
+    document.getElementById('processBulkUploadBtn').addEventListener('click', () => {
+      const text = document.getElementById('bulkPasteArea').value.trim();
+      if (!text) {
+        showFeedback('Paste design codes first or click "+ Load Sample Batch".', true);
+        return;
+      }
+      importBulkLines(text);
+    });
+
+    document.getElementById('csvFileInput').addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (evt) => {
+        const content = evt.target.result || '';
+        document.getElementById('bulkPasteArea').value = content;
+        importBulkLines(content);
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById('inspectorSelect').addEventListener('change', (e) => {
+      selectedInspectCode = e.target.value;
+      renderInspectorTab();
+    });
+
+    // Export & Download Buttons
+    document.getElementById('exportCsvQuickBtn').addEventListener('click', exportInventoryCsv);
+    document.getElementById('downloadStockCsvBtn').addEventListener('click', exportInventoryCsv);
+    document.getElementById('downloadAppHtmlBtn').addEventListener('click', downloadStandaloneHtml);
+
+    // Reset Sample Data
+    document.getElementById('resetSampleBtn').addEventListener('click', () => {
+      designs = JSON.parse(JSON.stringify(SAMPLE_DESIGNS));
+      selectedInspectCode = designs[0].code;
+      saveDesigns();
+      renderAll();
+      showFeedback('Sample garment designs restored.');
+    });
+
+    // Initial Render
+    renderAll();
+  </script>
+
+
+  <script>
+    // Register the app shell service worker when hosted on HTTPS or localhost.
+    if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch((err) => console.warn('Service worker registration failed:', err));
+      });
+    }
+  </script>
+</body></html>
